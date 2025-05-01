@@ -1,0 +1,56 @@
+
+Prototype: Convert Photo(jpg) to 3D Model
+
+DESCRIPTION:
+
+This prototype accepts jpg image type:
+- A photo (e.g., of a bird, toy, or chair)
+
+And generates:
+- A basic 3D mesh file (.obj)
+- A visualization of the 3D output using Open3D and Matplotlib
+
+FEATURES:
+
+1. Image input processing using PIL and resizing for model compatibility
+2. Depth estimation using GLPN (gLpn-nyu) from Hugging Face Transformers
+3. RGB-D image creation for 3D point cloud generation
+4. 3D mesh reconstruction from point cloud using Poisson surface reconstruction
+5. Export of final mesh as `.obj` file
+6. Visualization using Open3D
+
+HOW TO RUN:
+1. Ensure you have all the required dependencies.
+2. Place your input image in an accessible directory
+3. Modify the image path and output path in the script accordingly
+4. Run the script using Python
+
+REQUIREMENTS:
+
+- Python 3.8+
+- torch
+- transformers
+- numpy
+- matplotlib
+- pillow
+- open3d
+
+Install using:
+    - You can install libraries using anaconda prompt.
+
+LIBRARIES USED:
+---------------
+- transformers: for using the GLPN depth estimation model
+- PIL (Pillow): for image loading and resizing
+- Open3D: for point cloud and 3D mesh generation
+- matplotlib: for visualizing the depth map and input image
+- numpy, torch: for tensor and array operations
+
+WHAT I LEARNED FROM THIS PROJECT:
+
+- How to preprocess and normalize image inputs for machine learning models.
+- How to use a pre-trained depth estimation model (GLPN) from Hugging Face.
+- How to convert 2D depth maps into 3D point clouds using Open3D.
+
+Thank you,
+
